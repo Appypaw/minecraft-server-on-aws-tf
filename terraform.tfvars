@@ -1,0 +1,5 @@
+server_region             = "ap-northeast-2"
+server_availability_zones = "ap-northeast-2a"
+instance_type             = "t2.micro"
+server_name               = "Test Server"
+admin_ip                  = "0.0.0.0"
