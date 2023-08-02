@@ -1,7 +1,7 @@
 # Minecraft Service on AWS [Terraform]
 
 Public Cloud인 AWS와 IaC툴인 Terraform을 이용하여 간단한 Minecraft 서버를 서비스합니다.
-실습 및 구현에 초점을 두어서 작성하였습니다. Spigot이나 PaperMC와 같은 서드파티 API는 Docker를 이용하는것이 좋습니다.
+실습 및 구현에 초점을 두어서 작성하였습니다. Spigot이나 PaperMC와 같은 서드파티 API는 컨테이너 이미지를 받아 ECS를 사용하는것이 좋습니다.
 
 ## Resources
 - Provider - AWS
@@ -32,14 +32,12 @@ terraform version
 cd 디렉터리
 terraform init
 
-set AWS_ACCESS_KEY_ID=엑세스 키 ID
-set AWS_SECRET_ACCESS_KEY=시크릿키 ID
-
+terraform fmt
+terraform validate
 terraform plan
 
-terraform fmt
-
-terraform validate
+set AWS_ACCESS_KEY_ID=엑세스 키 ID
+set AWS_SECRET_ACCESS_KEY=시크릿키 ID
 
 terraform apply
 ```
